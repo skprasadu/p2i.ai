@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
+import CookieBanner from "@/components/CookieBanner";
 
 const siteUrl = "https://p2i.ai";
 
@@ -71,6 +72,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </footer>
         </div>
+
+        <CookieBanner />
 
         <script
           type="application/ld+json"

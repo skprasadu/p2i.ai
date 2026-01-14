@@ -62,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 Patents
               </a>
+              <a href="/#contact">Contact</a>
             </nav>
           </header>
           {children}

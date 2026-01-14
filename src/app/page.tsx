@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
+import ContactSection from "@/components/ContactSection";
 
 export default function HomePage() {
   return (
@@ -27,6 +28,9 @@ export default function HomePage() {
           <a className="btn" href="/projects">All projects</a>
         </div>
       </Section>
+
+      <div className="hr" />
+      <ContactSection />
     </main>
   );
 }

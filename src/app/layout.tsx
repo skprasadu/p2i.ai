@@ -54,7 +54,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
 
             <nav className="topNav">
+              <a href="/research">Research</a>
               <a href="/projects">Projects</a>
+              <a href="/notes">Notes</a>
+              <a href="/products">Products</a>
               <a
                 href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"
                 target="_blank"

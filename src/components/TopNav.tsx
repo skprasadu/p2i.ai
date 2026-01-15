@@ -11,7 +11,6 @@ export default function TopNav() {
             {/* Desktop nav */}
             <nav className="topNavDesktop">
                 <Link href="/research">Research</Link>
-                <Link href="/projects">Projects</Link>
                 <Link href="/notes">Notes</Link>
                 <Link href="/products">Products</Link>
                 <a
@@ -39,7 +38,6 @@ export default function TopNav() {
             {open ? (
                 <div className="topNavMobile">
                     <Link href="/research" onClick={() => setOpen(false)}>Research</Link>
-                    <Link href="/projects" onClick={() => setOpen(false)}>Projects</Link>
                     <Link href="/notes" onClick={() => setOpen(false)}>Notes</Link>
                     <Link href="/products" onClick={() => setOpen(false)}>Products</Link>
                     <a

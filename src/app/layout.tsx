@@ -13,20 +13,20 @@ const siteUrl = "https://p2i.ai";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "p2i.ai — Visual Engineering Portfolio",
+    default: "P2I.ai — Applied AI Research & Products",
     template: "%s — p2i.ai"
   },
-  description: "Immersive WebGL-first portfolio showcasing production engineering and visual demos.",
+  description: "Applied AI research, benchmarks, and tools—published as reproducible pages and shaped into products.",
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "p2i.ai  Visual Engineering Portfolio",
-    description: "Immersive WebGL-first portfolio showcasing production engineering and visual demos.",
+    title: "P2I.ai — Applied AI Research & Products",
+    description: "Applied AI research, benchmarks, and tools—published as reproducible pages and shaped into products.",
   },
   twitter: {
     card: "summary",
-    title: "p2i.ai  Visual Engineering Portfolio",
-    description: "Immersive WebGL-first portfolio showcasing production engineering and visual demos.",
+    title: "P2I.ai — Applied AI Research & Products",
+    description: "Applied AI research, benchmarks, and tools—published as reproducible pages and shaped into products.",
   },
   robots: { index: true, follow: true }
 };

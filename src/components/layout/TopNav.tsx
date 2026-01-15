@@ -22,8 +22,8 @@ export default function TopNav() {
             {/* Desktop nav */}
             <nav className="topNavDesktop">
                 <Link href="/research">Research</Link>
-                <Link href="/notes">Notes</Link>
                 <Link href="/products">Products</Link>
+                <Link href="/notes">Notes</Link>
                 <a
                     href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"
                     target="_blank"

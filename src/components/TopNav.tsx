@@ -1,23 +1,33 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function TopNav() {
     const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        if (!open) return;
+
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") setOpen(false);
+        };
+
+        window.addEventListener("keydown", onKeyDown);
+        return () => window.removeEventListener("keydown", onKeyDown);
+    }, [open]);
 
     return (
         <div className="topNavWrap">
             {/* Desktop nav */}
             <nav className="topNavDesktop">
                 <Link href="/research">Research</Link>
-                <Link href="/projects">Projects</Link>
                 <Link href="/notes">Notes</Link>
                 <Link href="/products">Products</Link>
                 <a
                     href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noreferrer nofollow"
                 >
                     Patents
                 </a>
@@ -35,17 +45,34 @@ export default function TopNav() {
                 ☰
             </button>
 
+            {open ? (
+                <button
+                    type="button"
+                    aria-label="Close menu"
+                    aria-hidden="true"
+                    tabIndex={-1}
+                    onClick={() => setOpen(false)}
+                    style={{
+                        position: "fixed",
+                        inset: 0,
+                        background: "transparent",
+                        border: "none",
+                        padding: 0,
+                        margin: 0,
+                        zIndex: 999,
+                    }}
+                />
+            ) : null}
             {/* Mobile dropdown */}
             {open ? (
                 <div className="topNavMobile">
                     <Link href="/research" onClick={() => setOpen(false)}>Research</Link>
-                    <Link href="/projects" onClick={() => setOpen(false)}>Projects</Link>
                     <Link href="/notes" onClick={() => setOpen(false)}>Notes</Link>
                     <Link href="/products" onClick={() => setOpen(false)}>Products</Link>
                     <a
                         href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noreferrer nofollow"
                         onClick={() => setOpen(false)}
                     >
                         Patents

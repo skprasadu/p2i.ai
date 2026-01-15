@@ -1,52 +1,61 @@
 
 import Link from "next/link";
 
+
 import "@/styles/globals.css";
+
 import CookieBanner from "@/components/CookieBanner";
 import TopNav from "@/components/TopNav";
 
 import type { Metadata } from "next";
 
-
 const siteUrl = "https://p2i.ai";
+
+const siteTitle = "P2I.ai — Applied AI Research & Products";
+const siteDescription =
+  "Applied AI research, benchmarks, and tools—published as reproducible pages and shaped into products.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "p2i.ai — Visual Engineering Portfolio",
-    template: "%s — p2i.ai"
+    default: siteTitle,
+    template: "%s — P2I.ai",
   },
-  description: "Immersive WebGL-first portfolio showcasing production engineering and visual demos.",
+  description: siteDescription,
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "p2i.ai  Visual Engineering Portfolio",
-    description: "Immersive WebGL-first portfolio showcasing production engineering and visual demos.",
+    title: siteTitle,
+    description: siteDescription,
   },
   twitter: {
     card: "summary",
-    title: "p2i.ai  Visual Engineering Portfolio",
-    description: "Immersive WebGL-first portfolio showcasing production engineering and visual demos.",
+    title: siteTitle,
+    description: siteDescription,
   },
-  robots: { index: true, follow: true }
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // JSON-LD (LLM-friendly + Google-friendly)
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Krishna Srinivasmurthy",
     url: siteUrl,
-    sameAs: ["https://patents.google.com/?inventor=Krishna+Srinivasmurthy"],
-    jobTitle: "AI Engineer / Builder",
-    description: "Engineer building production systems and visual demos."
+    sameAs: [
+      "https://www.linkedin.com/in/krishnaprasad1",
+      "https://github.com/skprasadu",
+      "https://patents.google.com/?inventor=Krishna+Srinivasmurthy",
+    ],
+    jobTitle: "Applied AI Research & Engineering",
+    description:
+      "Applied AI research focused on benchmarking, Apple Silicon performance, and productized tools.",
   };
 
   return (
     <html lang="en">
       <body>
-        <div className="container" style={{ paddingBottom: 50 }}>
+        <div className="container">
           <header
             style={{
               position: "relative",
@@ -56,16 +65,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               alignItems: "center",
             }}
           >
-            <Link href="/" className="brandMark" aria-label="p2i.ai home">
-              <em>P2I</em><span>.ai</span>
+            <Link href="/" className="brandMark" aria-label="P2I.ai home">
+              <em>P2I</em>
+              <span>.ai</span>
             </Link>
+
             <TopNav />
           </header>
+
           {children}
 
-          <footer style={{ marginTop: 40, paddingTop: 18 }} className="hr">
+          <footer className="hr" style={{ marginTop: 40, paddingTop: 18 }}>
             <div style={{ color: "rgba(11, 15, 23, 0.65)", fontSize: 13 }}>
-              © {new Date().getFullYear()} p2i.ai — built with Next.js + WebGL
+              © {new Date().getFullYear()} P2I.ai — Applied AI Research & Products
             </div>
           </footer>
         </div>

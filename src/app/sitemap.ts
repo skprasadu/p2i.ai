@@ -8,11 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: `${base}/`, lastModified: new Date() },
-    { url: `${base}/projects`, lastModified: new Date() },
 
     // content hubs
     { url: `${base}/research`, lastModified: new Date() },
-    { url: `${base}/projects-md`, lastModified: new Date() }, // optional if you add
     { url: `${base}/products`, lastModified: new Date() },
     { url: `${base}/notes`, lastModified: new Date() },
 

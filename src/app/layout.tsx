@@ -5,6 +5,7 @@ import Link from "next/link";
 import "@/styles/globals.css";
 
 import CookieBanner from "@/components/CookieBanner";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import TopNav from "@/components/TopNav";
 
 import type { Metadata } from "next";
@@ -82,6 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </footer>
         </div>
 
+        <GoogleAnalytics />
         <CookieBanner />
 
         <script

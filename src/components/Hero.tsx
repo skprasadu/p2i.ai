@@ -1,10 +1,8 @@
 import Link from "next/link";
 
-import Scene from "./Scene";
-
 export default function Hero() {
   return (
-    <div className="heroGrid">
+    <div className="heroBlock">
       <div className="heroPanel">
         <div className="badge">
           <span className="kbd">p2i.ai</span>
@@ -22,16 +20,19 @@ export default function Hero() {
         </p>
 
         <div style={{ display: "flex", gap: 10, marginTop: 18, flexWrap: "wrap" }}>
-          <Link className="btn" href="/projects">View projects</Link>
-          <a className="btn btnSecondary" href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy" target="_blank" rel="noreferrer">
+          <Link className="btn" href="/research">Explore research</Link>
+          <Link className="btn btnSecondary" href="/products">Explore products</Link>
+          <Link className="btn btnSecondary" href="/notes">Read notes</Link>
+
+          <a
+            className="btn btnSecondary"
+            href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"
+            target="_blank"
+            rel="noreferrer"
+          >
             Patents
           </a>
         </div>
-
-      </div>
-
-      <div className="sceneStage" style={{ height: 360 }}>
-        <Scene />
       </div>
     </div>
   );

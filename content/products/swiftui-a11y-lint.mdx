@@ -1,0 +1,20 @@
+---
+title: "SwiftUI Accessibility Lint (GitHub Marketplace Action)"
+description: "A GitHub Action that validates accessibility labels and patterns in SwiftUI code—designed as a wedge product."
+date: "2026-01-15"
+tags: ["SwiftUI", "Accessibility", "GitHub Actions", "Marketplace"]
+repo: "https://github.com/skprasadu/swiftui-a11y-lint"
+status: "published"
+---
+
+## Summary
+This action fails PRs when SwiftUI accessibility practices are violated. It’s a practical “cheese → mousetrap” wedge: free linting that leads to better UI quality and deeper tooling.
+
+```mermaid
+flowchart LR
+  A[PR Opened] --> B[GitHub Action]
+  B --> C[Parse SwiftUI]
+  C --> D[Rule Checks]
+  D -->|fail| E[PR blocked]
+  D -->|pass| F[Merge]
+```

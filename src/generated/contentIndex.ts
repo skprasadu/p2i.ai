@@ -16,6 +16,22 @@ export type ContentItem = {
 export const contentIndex: ContentItem[] = [
   {
     "section": "notes",
+    "slug": "workbench-learnings-01",
+    "title": "Workbench learnings #1: designing a curation workflow that scales",
+    "description": "High-level learnings from building a compliance workbench—without exposing proprietary IP.",
+    "date": "2026-01-15",
+    "tags": [
+      "Workbench",
+      "Curation",
+      "Workflow",
+      "Design"
+    ],
+    "repo": null,
+    "status": "published",
+    "sourcePath": "/Users/krishnasrinivasamurthy/my-applications/javascript/p2i.ai/.content_cache/notes/workbench-learnings-01.mdx"
+  },
+  {
+    "section": "notes",
     "slug": "readme",
     "title": "Notes",
     "description": "Short build notes and experiments: Apple Silicon, Metal, SwiftUI tooling, inference performance.",
@@ -29,6 +45,22 @@ export const contentIndex: ContentItem[] = [
   },
   {
     "section": "products",
+    "slug": "swiftui-a11y-lint",
+    "title": "SwiftUI Accessibility Lint (GitHub Marketplace Action)",
+    "description": "A GitHub Action that validates accessibility labels and patterns in SwiftUI code—designed as a wedge product.",
+    "date": "2026-01-15",
+    "tags": [
+      "SwiftUI",
+      "Accessibility",
+      "GitHub Actions",
+      "Marketplace"
+    ],
+    "repo": "https://github.com/skprasadu/swiftui-a11y-lint",
+    "status": "published",
+    "sourcePath": "/Users/krishnasrinivasamurthy/my-applications/javascript/p2i.ai/.content_cache/products/swiftui-a11y-lint.mdx"
+  },
+  {
+    "section": "products",
     "slug": "readme",
     "title": "Products",
     "description": "Productized versions of research and tools. Early prototypes, roadmaps, and release notes.",
@@ -39,6 +71,23 @@ export const contentIndex: ContentItem[] = [
     "repo": null,
     "status": "published",
     "sourcePath": "/Users/krishnasrinivasamurthy/my-applications/javascript/p2i.ai/.content_cache/products/readme.mdx"
+  },
+  {
+    "section": "research",
+    "slug": "apple-edge-llm-lab",
+    "title": "Apple Edge LLM Lab: MPS vs MLX vs Metal benchmarking",
+    "description": "A reproducible benchmark suite to compare inference latency, throughput, and memory on Apple Silicon.",
+    "date": "2026-01-15",
+    "tags": [
+      "Apple Silicon",
+      "MPS",
+      "MLX",
+      "Metal",
+      "Benchmark"
+    ],
+    "repo": "https://github.com/skprasadu/apple-edge-llm-lab",
+    "status": "published",
+    "sourcePath": "/Users/krishnasrinivasamurthy/my-applications/javascript/p2i.ai/.content_cache/research/apple-edge-llm-lab.mdx"
   },
   {
     "section": "research",

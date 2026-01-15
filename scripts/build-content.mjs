@@ -13,6 +13,8 @@ const OUT_DIAGRAMS_DIR = path.join(ROOT, "public", "diagrams");
 // Sections you want
 const SECTIONS = ["research", "projects", "products", "notes"];
 
+const IS_CI = process.env.CI === "true" || process.env.VERCEL === "1";
+
 function ensureDir(p) {
   fs.mkdirSync(p, { recursive: true });
 }
@@ -48,6 +50,11 @@ function transformMermaidToImages({ mdx, title, description }) {
 
     // render SVG if missing
     if (!fs.existsSync(svgAbs)) {
+      if (IS_CI) {
+        throw new Error(
+          `Missing mermaid SVG for hash ${hash}. Run build-content locally to generate public/diagrams/${hash}.svg and commit it.`
+        );
+      }
       const tmpMmd = path.join(OUT_DIAGRAMS_DIR, `${hash}.mmd`);
       fs.writeFileSync(tmpMmd, trimmed, "utf8");
 

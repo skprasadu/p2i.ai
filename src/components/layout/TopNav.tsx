@@ -67,8 +67,8 @@ export default function TopNav() {
             {open ? (
                 <div className="topNavMobile">
                     <Link href="/research" onClick={() => setOpen(false)}>Research</Link>
-                    <Link href="/notes" onClick={() => setOpen(false)}>Notes</Link>
                     <Link href="/products" onClick={() => setOpen(false)}>Products</Link>
+                    <Link href="/notes" onClick={() => setOpen(false)}>Notes</Link>
                     <a
                         href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"
                         target="_blank"

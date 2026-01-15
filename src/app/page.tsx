@@ -1,8 +1,10 @@
-import Hero from "@/components/Hero";
-import Section from "@/components/Section";
-import ProjectCard from "@/components/ProjectCard";
-import { projects } from "@/data/projects";
+import Link from "next/link";
+
 import ContactSection from "@/components/ContactSection";
+import Hero from "@/components/Hero";
+import ProjectCard from "@/components/ProjectCard";
+import Section from "@/components/Section";
+import { projects } from "@/data/projects";
 
 export default function HomePage() {
   return (
@@ -25,7 +27,7 @@ export default function HomePage() {
           {projects.slice(0, 3).map((p) => <ProjectCard key={p.title} p={p} />)}
         </div>
         <div style={{ marginTop: 14 }}>
-          <a className="btn" href="/projects">All projects</a>
+          <Link className="btn" href="/projects">All projects</Link>
         </div>
       </Section>
 

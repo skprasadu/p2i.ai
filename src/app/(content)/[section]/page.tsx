@@ -1,7 +1,10 @@
 import { notFound } from "next/navigation";
-import type { Metadata } from "next";
+
 import Section from "@/components/Section";
+import type { ContentSection } from "@/generated/contentIndex";
 import { getItemsBySection, getSections } from "@/lib/content";
+
+import type { Metadata } from "next";
 
 function titleize(x: unknown): string {
   const s = typeof x === "string" ? x : "";
@@ -20,7 +23,8 @@ export async function generateMetadata(
   const { section } = await params;
   if (!section) return { title: "Content" };
 
-  if (!getSections().includes(section as any)) {
+  const allowed = getSections();
+  if (!allowed.includes(section as ContentSection)) {
     return { title: "Not found" };
   }
 
@@ -38,9 +42,9 @@ export default async function ContentSectionPage(
   if (!section) return notFound();
 
   const allowed = getSections();
-  if (!allowed.includes(section as any)) return notFound();
+  if (!allowed.includes(section as ContentSection)) return notFound();
 
-  const items = getItemsBySection(section as any);
+  const items = getItemsBySection(section as ContentSection);
 
   return (
     <main>

@@ -1,8 +1,11 @@
 import { notFound } from "next/navigation";
-import type { Metadata } from "next";
-import Section from "@/components/Section";
+
 import MDXRenderer from "@/components/MDXRenderer";
+import Section from "@/components/Section";
+import type { ContentSection } from "@/generated/contentIndex";
 import { getItem, getItemsBySection, getSections } from "@/lib/content";
+
+import type { Metadata } from "next";
 
 export function generateStaticParams() {
   const params: Array<{ section: string; slug: string }> = [];
@@ -20,8 +23,8 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { section, slug } = await params;
 
-  if (!getSections().includes(section as any)) return {};
-  const it = getItem(section as any, slug);
+  if (!getSections().includes(section as ContentSection)) return {};
+  const it = getItem(section as ContentSection, slug);
   if (!it) return {};
 
   return {
@@ -36,9 +39,9 @@ export default async function ContentDetailPage(
 ) {
   const { section, slug } = await params;
 
-  if (!getSections().includes(section as any)) return notFound();
+  if (!getSections().includes(section as ContentSection)) return notFound();
 
-  const it = getItem(section as any, slug);
+  const it = getItem(section as ContentSection, slug);
   if (!it) return notFound();
 
   return (

@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import "@/styles/globals.css";
 import CookieBanner from "@/components/CookieBanner";
+import TopNav from "@/components/TopNav";
 
 import type { Metadata } from "next";
 
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="container" style={{ paddingBottom: 50 }}>
           <header
             style={{
+              position: "relative",
               padding: "18px 0",
               display: "flex",
               justifyContent: "space-between",
@@ -57,23 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" className="brandMark" aria-label="p2i.ai home">
               <em>P2I</em><span>.ai</span>
             </Link>
-
-            <nav className="topNav">
-              <Link href="/research">Research</Link>
-              <Link href="/projects">Projects</Link>
-              <Link href="/notes">Notes</Link>
-              <Link href="/products">Products</Link>
-
-              <a
-                href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Patents
-              </a>
-
-              <Link href="/#contact">Contact</Link>
-            </nav>
+            <TopNav />
           </header>
           {children}
 

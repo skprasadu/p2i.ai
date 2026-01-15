@@ -21,7 +21,7 @@ export default function HomePage() {
       <div className="hr" />
 
       <Section title="Start here">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14 }}>
+        <div className="startHereGrid">
           <CtaBucket
             label="Research"
             section="research"

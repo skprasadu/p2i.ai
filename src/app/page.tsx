@@ -1,7 +1,7 @@
-import ContactSection from "@/components/ContactSection";
-import CtaBucket from "@/components/CtaBucket";
-import Hero from "@/components/Hero";
-import Section from "@/components/Section";
+import ContactSection from "@/components/layout/ContactSection";
+import Section from "@/components/layout/Section";
+import CtaBucket from "@/components/marketing/CtaBucket";
+import Hero from "@/components/marketing/Hero";
 import { featured } from "@/config/featured";
 import { getItem } from "@/lib/content";
 

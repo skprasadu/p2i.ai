@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import Section from "@/components/Section";
+import Section from "@/components/layout/Section";
 import type { ContentSection } from "@/generated/contentIndex";
 import { getItemsBySection, getSections } from "@/lib/content";
 

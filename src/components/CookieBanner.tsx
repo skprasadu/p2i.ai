@@ -1,30 +1,49 @@
 "use client";
 
-import { useState } from "react";
+import { useSyncExternalStore, useCallback } from "react";
 
 type Consent = "accepted" | "rejected";
-
 const STORAGE_KEY = "p2i_cookie_consent_v1";
 
 function setCookie(name: string, value: string, days: number) {
   const maxAge = days * 24 * 60 * 60;
-  document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(
-    value
-  )}; Path=/; Max-Age=${maxAge}; SameSite=Lax`;
+  document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; Path=/; Max-Age=${maxAge}; SameSite=Lax`;
+}
+
+function subscribe(_onStoreChange: () => void) {
+  // We don't actually subscribe to storage changes (rare), but React requires a subscribe function.
+  // Return unsubscribe no-op.
+  return () => { };
+}
+
+function getSnapshot(): string | null {
+  try {
+    return window.localStorage.getItem(STORAGE_KEY);
+  } catch {
+    return null;
+  }
+}
+
+// This is what React uses during SSR / hydration to avoid mismatch:
+function getServerSnapshot(): string | null {
+  return "accepted"; // pretend consent exists on server => banner hidden on SSR
 }
 
 export default function CookieBanner() {
-  const [show, setShow] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return !window.localStorage.getItem(STORAGE_KEY);
-  });
+  const consent = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const show = !consent;
 
-  function save(consent: Consent) {
-    window.localStorage.setItem(STORAGE_KEY, consent);
-    // Optional: also set an actual cookie so backend can read it later
-    setCookie("p2i_cookie_consent", consent, 180);
-    setShow(false);
-  }
+  const save = useCallback((value: Consent) => {
+    try {
+      window.localStorage.setItem(STORAGE_KEY, value);
+    } catch {
+      // ignore
+    }
+    setCookie("p2i_cookie_consent", value, 180);
+    // No state update needed; next page load will respect it.
+    // If you want it to disappear instantly, we can force a reload or add a tiny state, but let's keep it simple.
+    window.location.reload();
+  }, []);
 
   if (!show) return null;
 
@@ -60,20 +79,10 @@ export default function CookieBanner() {
       </div>
 
       <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-        <button
-          type="button"
-          className="btn btnSecondary"
-          onClick={() => save("rejected")}
-          aria-label="Reject non-essential cookies"
-        >
+        <button type="button" className="btn btnSecondary" onClick={() => save("rejected")}>
           Reject
         </button>
-        <button
-          type="button"
-          className="btn"
-          onClick={() => save("accepted")}
-          aria-label="Accept all cookies"
-        >
+        <button type="button" className="btn" onClick={() => save("accepted")}>
           Accept all
         </button>
       </div>

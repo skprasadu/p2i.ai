@@ -1,0 +1,28 @@
+---
+title: "Apple Edge LLM Lab: MPS vs MLX vs Metal benchmarking"
+description: "A reproducible benchmark suite to compare inference latency, throughput, and memory on Apple Silicon."
+date: "2026-01-15"
+tags: ["Apple Silicon", "MPS", "MLX", "Metal", "Benchmark"]
+repo: "https://github.com/skprasadu/apple-edge-llm-lab"
+status: "published"
+---
+
+## Summary
+This work benchmarks LLM inference on Apple Silicon across MPS, MLX, and Metal-centric pipelines with repeatable measurements.
+
+```mermaid
+flowchart LR
+  A[Model + Prompt] --> B[Runner]
+  B --> C{Backend}
+  C --> D[MPS]
+  C --> E[MLX]
+  C --> F[Metal]
+  D --> G[Metrics]
+  E --> G
+  F --> G
+```
+
+## Results (placeholder)
+  - Latency: TBD
+  - Tokens/sec: TBD
+  - Peak memory: TBD

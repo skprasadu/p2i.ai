@@ -1,12 +1,18 @@
 import { notFound } from "next/navigation";
 
-import MDXRenderer from "@/components/MDXRenderer";
-import Section from "@/components/Section";
+import ContentOpenTracker from "@/components/analytics/ContentOpenTracker";
+import MDXRenderer from "@/components/content/MDXRenderer";
+import Section from "@/components/layout/Section";
 import type { ContentSection } from "@/generated/contentIndex";
 import { getItem, getItemsBySection, getSections } from "@/lib/content";
 
 import type { Metadata } from "next";
 
+type TrackableSection = "research" | "products" | "notes";
+
+function isTrackableSection(s: ContentSection): s is TrackableSection {
+  return s === "research" || s === "products" || s === "notes";
+}
 export function generateStaticParams() {
   const params: Array<{ section: string; slug: string }> = [];
   for (const section of getSections()) {
@@ -39,6 +45,10 @@ export default async function ContentDetailPage(
 ) {
   const { section, slug } = await params;
 
+  const s = section as ContentSection;
+  const trackSection: TrackableSection | null =
+    isTrackableSection(s) ? s : null;
+
   if (!getSections().includes(section as ContentSection)) return notFound();
 
   const it = getItem(section as ContentSection, slug);
@@ -46,6 +56,11 @@ export default async function ContentDetailPage(
 
   return (
     <main>
+      {trackSection && (<ContentOpenTracker
+        section={trackSection}   // better: ensure it's one of the 3
+        slug={it.slug}
+        tags={it.tags}
+      />)}
       <Section title={it.title}>
         <div className="card" style={{ marginBottom: 14 }}>
           <p>{it.description}</p>

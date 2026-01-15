@@ -4,9 +4,9 @@ import Link from "next/link";
 
 import "@/styles/globals.css";
 
-import CookieBanner from "@/components/CookieBanner";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
-import TopNav from "@/components/TopNav";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import CookieBanner from "@/components/consent/CookieBanner";
+import TopNav from "@/components/layout/TopNav";
 
 import type { Metadata } from "next";
 

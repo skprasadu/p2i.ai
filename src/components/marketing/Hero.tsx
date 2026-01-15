@@ -1,4 +1,4 @@
-import Link from "next/link";
+import TrackedLink from "../analytics/TrackedLink";
 
 export default function Hero() {
   return (
@@ -20,9 +20,21 @@ export default function Hero() {
         </p>
 
         <div style={{ display: "flex", gap: 10, marginTop: 18, flexWrap: "wrap" }}>
-          <Link className="btn" href="/research">Explore research</Link>
-          <Link className="btn btnSecondary" href="/products">Explore products</Link>
-          <Link className="btn btnSecondary" href="/notes">Read notes</Link>
+          <TrackedLink
+            href="/research"
+            className="btn"
+            event={{ event: "cta_click", location: "hero", target: "research", label: "Explore research" }}
+          >Explore research</TrackedLink>
+          <TrackedLink
+            href="/research"
+            className="btn"
+            event={{ event: "cta_click", location: "hero", target: "products", label: "Explore products" }}
+          > Explore products</TrackedLink>
+          <TrackedLink
+            href="/research"
+            className="btn"
+            event={{ event: "cta_click", location: "hero", target: "notes", label: "Explore notes" }}
+          >Read notes</TrackedLink>
 
           <a
             className="btn btnSecondary"
@@ -34,6 +46,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-    </div>
+    </div >
   );
 }

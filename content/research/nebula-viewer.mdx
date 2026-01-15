@@ -1,0 +1,25 @@
+---
+title: "NebulaViewer: 3M-triangle GLTF on Apple (Swift + AFM)"
+description: "A Swift/AFM tool that loads a massive GLTF model and tags viewpoints with AI."
+date: "2026-01-14"
+tags: ["Swift", "AFM", "GLTF", "Apple"]
+repo: "https://github.com/skprasadu/NebulaViewer"
+status: "published"
+---
+
+## Summary
+This work focuses on pushing Apple’s rendering stack to handle multi-million-triangle GLTF scenes interactively, then layering a viewpoint tagging workflow.
+
+```mermaid
+flowchart LR
+  A[GLTF Scene] --> B[AFM Loader]
+  B --> C[GPU Upload + Render]
+  C --> D[Viewpoint Capture]
+  D --> E[AI Tagging]
+```
+
+## Notes
+
+- Add benchmarks (load time, FPS, memory).
+- State constraints (device, OS version, triangle count).
+- List what you learned or what you’d do next.

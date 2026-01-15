@@ -1,5 +1,6 @@
-import type { MetadataRoute } from "next";
 import { getPublishedItems } from "@/lib/content";
+
+import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://p2i.ai";

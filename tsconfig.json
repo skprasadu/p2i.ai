@@ -30,7 +30,26 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    /* 🔒 Catch real bugs */
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* 🔒 Runtime safety */
+    "useUnknownInCatchVariables": true,
+
+    /* 🔒 Maintainability */
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+
+    /* 🔒 Prevent lazy typing */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    /* Keep */
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "next-env.d.ts",

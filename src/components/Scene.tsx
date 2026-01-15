@@ -1,9 +1,9 @@
 "use client";
 
-import * as THREE from "three";
-import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
+import * as THREE from "three";
 
 function FloatingField() {
   const mesh = useRef<THREE.InstancedMesh>(null);
@@ -11,16 +11,17 @@ function FloatingField() {
   const count = 260;
 
   const positions = useMemo(() => {
+    const rnd = mulberry32(1337); // stable seed
     const arr: Array<{ p: THREE.Vector3; r: number; s: number }> = [];
     for (let i = 0; i < count; i++) {
       arr.push({
         p: new THREE.Vector3(
-          (Math.random() - 0.5) * 10,
-          (Math.random() - 0.5) * 6,
-          (Math.random() - 0.5) * 8
+          (rnd() - 0.5) * 10,
+          (rnd() - 0.5) * 6,
+          (rnd() - 0.5) * 8
         ),
-        r: Math.random() * Math.PI * 2,
-        s: 0.12 + Math.random() * 0.35
+        r: rnd() * Math.PI * 2,
+        s: 0.12 + rnd() * 0.35
       });
     }
     return arr;
@@ -32,7 +33,10 @@ function FloatingField() {
     const py = pointer.y * 0.4;
 
     for (let i = 0; i < count; i++) {
-      const { p, r, s } = positions[i];
+      const item = positions[i];
+      if (!item) continue;
+
+      const { p, r, s } = item;
       dummy.position.set(
         p.x + Math.sin(t * 0.45 + i) * 0.05 + px,
         p.y + Math.cos(t * 0.35 + i) * 0.05 + py,
@@ -77,4 +81,13 @@ export default function Scene() {
       </Canvas>
     </div>
   );
+}
+
+function mulberry32(seed: number) {
+  return function () {
+    let t = (seed += 0x6D2B79F5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
 }

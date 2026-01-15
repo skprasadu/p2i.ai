@@ -1,6 +1,11 @@
-import type { Metadata } from "next";
+
+import Link from "next/link";
+
 import "@/styles/globals.css";
 import CookieBanner from "@/components/CookieBanner";
+
+import type { Metadata } from "next";
+
 
 const siteUrl = "https://p2i.ai";
 
@@ -49,15 +54,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               alignItems: "center",
             }}
           >
-            <a href="/" className="brandMark" aria-label="p2i.ai home">
+            <Link href="/" className="brandMark" aria-label="p2i.ai home">
               <em>P2I</em><span>.ai</span>
-            </a>
+            </Link>
 
             <nav className="topNav">
-              <a href="/research">Research</a>
-              <a href="/projects">Projects</a>
-              <a href="/notes">Notes</a>
-              <a href="/products">Products</a>
+              <Link href="/research">Research</Link>
+              <Link href="/projects">Projects</Link>
+              <Link href="/notes">Notes</Link>
+              <Link href="/products">Products</Link>
+
               <a
                 href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"
                 target="_blank"
@@ -65,7 +71,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 Patents
               </a>
-              <a href="/#contact">Contact</a>
+
+              <Link href="/#contact">Contact</Link>
             </nav>
           </header>
           {children}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type Consent = "accepted" | "rejected";
 
@@ -14,13 +14,10 @@ function setCookie(name: string, value: string, days: number) {
 }
 
 export default function CookieBanner() {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    // Only decide on client
-    const v = window.localStorage.getItem(STORAGE_KEY);
-    if (!v) setShow(true);
-  }, []);
+  const [show, setShow] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return !window.localStorage.getItem(STORAGE_KEY);
+  });
 
   function save(consent: Consent) {
     window.localStorage.setItem(STORAGE_KEY, consent);

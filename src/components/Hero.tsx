@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Scene from "./Scene";
 
 export default function Hero() {
@@ -6,18 +8,21 @@ export default function Hero() {
       <div className="heroPanel">
         <div className="badge">
           <span className="kbd">p2i.ai</span>
-          <span>Visual engineering portfolio</span>
+          <span>Applied AI Research • Apple Silicon • Performance Engineering</span>
         </div>
 
-        <h1>Builds that feel inevitable.</h1>
+        <h1>Applied AI research that turns benchmarks into products.</h1>
 
         <p style={{ marginTop: 10 }}>
-          I ship production-grade systems — but I present them like a product.
-          This site is a living demo: fast, indexable, and visually sharp.
+          I research and build AI systems with a focus on performance, reproducibility,
+          and real-world constraints. My work spans LLM inference benchmarking, serverless
+          model startup latency, Metal-accelerated attention kernels, and large-scale 3D
+          rendering on Apple Silicon. P2I.ai is where this research is published and
+          shaped into production-ready tools and products.
         </p>
 
         <div style={{ display: "flex", gap: 10, marginTop: 18, flexWrap: "wrap" }}>
-          <a className="btn" href="/projects">View projects</a>
+          <Link className="btn" href="/projects">View projects</Link>
           <a className="btn btnSecondary" href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy" target="_blank" rel="noreferrer">
             Patents
           </a>

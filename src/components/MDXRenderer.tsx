@@ -1,5 +1,7 @@
 import fs from "node:fs";
+
 import { compileMDX } from "next-mdx-remote/rsc";
+
 import MermaidImage from "@/components/MermaidImage";
 
 export default async function MDXRenderer(props: { filePath: string }) {

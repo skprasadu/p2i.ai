@@ -15,7 +15,7 @@ export default function Hero() {
           I research and build AI systems with a focus on performance, reproducibility,
           and real-world constraints. My work spans LLM inference benchmarking, serverless
           model startup latency, Metal-accelerated attention kernels, and large-scale 3D
-          rendering on Apple Silicon. P2I.ai is where this research is published and
+          rendering on Apple Silicon. Power2Idea AI is where this research is published and
           shaped into production-ready tools and products.
         </p>
 

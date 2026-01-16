@@ -67,8 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }}
           >
             <Link href="/" className="brandMark" aria-label="P2I.ai home">
-              <em>P2I</em>
-              <span>.ai</span>
+              <span>Power2Idea</span>
             </Link>
 
             <TopNav />
@@ -78,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <footer className="hr" style={{ marginTop: 40, paddingTop: 18 }}>
             <div style={{ color: "rgba(11, 15, 23, 0.65)", fontSize: 13 }}>
-              © {new Date().getFullYear()} P2I.ai — Applied AI Research & Products
+              © {new Date().getFullYear()} Power2Idea LLC — Applied AI Research & Products
             </div>
           </footer>
         </div>

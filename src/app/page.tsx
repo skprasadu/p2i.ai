@@ -23,16 +23,16 @@ export default function HomePage() {
       <Section title="Start here">
         <div className="startHereGrid">
           <CtaBucket
-            label="Research"
-            section="research"
-            featured={fResearch}
-            blurb="Benchmarks, deep dives, and reproducible experiments across Apple Silicon, inference, and GPU systems."
-          />
-          <CtaBucket
             label="Products"
             section="products"
             featured={fProducts}
             blurb="Tools that ship. Open-source wedges and commercial productization notes—without leaking IP."
+          />
+          <CtaBucket
+            label="Research"
+            section="research"
+            featured={fResearch}
+            blurb="Benchmarks, deep dives, and reproducible experiments across Apple Silicon, inference, and GPU systems."
           />
           <CtaBucket
             label="Notes"

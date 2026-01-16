@@ -21,8 +21,8 @@ export default function TopNav() {
         <div className="topNavWrap">
             {/* Desktop nav */}
             <nav className="topNavDesktop">
-                <Link href="/research">Research</Link>
                 <Link href="/products">Products</Link>
+                <Link href="/research">Research</Link>
                 <Link href="/notes">Notes</Link>
                 <a
                     href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"
@@ -66,8 +66,8 @@ export default function TopNav() {
             {/* Mobile dropdown */}
             {open ? (
                 <div className="topNavMobile">
-                    <Link href="/research" onClick={() => setOpen(false)}>Research</Link>
                     <Link href="/products" onClick={() => setOpen(false)}>Products</Link>
+                    <Link href="/research" onClick={() => setOpen(false)}>Research</Link>
                     <Link href="/notes" onClick={() => setOpen(false)}>Notes</Link>
                     <a
                         href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"

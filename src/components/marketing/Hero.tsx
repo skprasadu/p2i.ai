@@ -23,13 +23,13 @@ export default function Hero() {
           <TrackedLink
             href="/research"
             className="btn"
-            event={{ event: "cta_click", location: "hero", target: "research", label: "Explore research" }}
-          >Explore research</TrackedLink>
+            event={{ event: "cta_click", location: "hero", target: "products", label: "Explore products" }}
+          > Explore products</TrackedLink>
           <TrackedLink
             href="/research"
             className="btn"
-            event={{ event: "cta_click", location: "hero", target: "products", label: "Explore products" }}
-          > Explore products</TrackedLink>
+            event={{ event: "cta_click", location: "hero", target: "research", label: "Explore research" }}
+          >Explore research</TrackedLink>
           <TrackedLink
             href="/research"
             className="btn"

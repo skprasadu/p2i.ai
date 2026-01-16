@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 
 const siteUrl = "https://p2i.ai";
 
-const siteTitle = "P2I.ai — Applied AI Research & Products";
+const siteTitle = "Power2Idea AI — Applied AI Research & Products";
 const siteDescription =
   "Applied AI research, benchmarks, and tools—published as reproducible pages and shaped into products.";
 
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: siteTitle,
-    template: "%s — P2I.ai",
+    template: "%s — Power2Idea AI",
   },
   description: siteDescription,
   openGraph: {
@@ -77,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <footer className="hr" style={{ marginTop: 40, paddingTop: 18 }}>
             <div style={{ color: "rgba(11, 15, 23, 0.65)", fontSize: 13 }}>
-              © {new Date().getFullYear()} Power2Idea LLC — Applied AI Research & Products
+              © {new Date().getFullYear()} Power2Idea AI — Applied AI Research & Products
             </div>
           </footer>
         </div>

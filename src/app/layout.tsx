@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }}
           >
             <Link href="/" className="brandMark" aria-label="P2I.ai home">
-              <span>Power2Idea</span>
+              <span>Power2Idea AI</span>
             </Link>
 
             <TopNav />

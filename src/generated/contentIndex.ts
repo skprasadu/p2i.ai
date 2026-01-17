@@ -31,17 +31,21 @@ export const contentIndex: ContentItem[] = [
     "sourcePath": "/Users/krishnasrinivasamurthy/my-applications/javascript/p2i.ai/.content_cache/notes/workbench-learnings-01.mdx"
   },
   {
-    "section": "notes",
-    "slug": "readme",
-    "title": "Notes",
-    "description": "Short build notes and experiments: Apple Silicon, Metal, SwiftUI tooling, inference performance.",
-    "date": "2026-01-14",
+    "section": "products",
+    "slug": "apple-policy-lint",
+    "title": "Apple Policy Lint (Swift AST): policy-sensitive API checks in PRs",
+    "description": "A GitHub Action that parses Swift with a real AST to detect Apple policy-sensitive APIs (e.g., Required Reason APIs) and posts a clean PR report before App Store review.",
+    "date": "2026-01-17",
     "tags": [
-      "Notes"
+      "Swift",
+      "AST",
+      "Privacy Manifest",
+      "Compliance",
+      "GitHub Actions"
     ],
     "repo": null,
     "status": "published",
-    "sourcePath": "/Users/krishnasrinivasamurthy/my-applications/javascript/p2i.ai/.content_cache/notes/readme.mdx"
+    "sourcePath": "/Users/krishnasrinivasamurthy/my-applications/javascript/p2i.ai/.content_cache/products/apple-policy-lint.mdx"
   },
   {
     "section": "products",
@@ -58,19 +62,6 @@ export const contentIndex: ContentItem[] = [
     "repo": "https://github.com/skprasadu/swiftui-a11y-lint",
     "status": "published",
     "sourcePath": "/Users/krishnasrinivasamurthy/my-applications/javascript/p2i.ai/.content_cache/products/swiftui-a11y-lint.mdx"
-  },
-  {
-    "section": "products",
-    "slug": "readme",
-    "title": "Products",
-    "description": "Productized versions of research and tools. Early prototypes, roadmaps, and release notes.",
-    "date": "2026-01-14",
-    "tags": [
-      "Products"
-    ],
-    "repo": null,
-    "status": "published",
-    "sourcePath": "/Users/krishnasrinivasamurthy/my-applications/javascript/p2i.ai/.content_cache/products/readme.mdx"
   },
   {
     "section": "research",

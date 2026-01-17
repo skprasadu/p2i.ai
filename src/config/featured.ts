@@ -6,6 +6,6 @@ export type FeaturedConfig = {
 
 export const featured: FeaturedConfig = {
     research: { section: "research", slug: "apple-edge-llm-lab" },
-    products: { section: "products", slug: "swiftui-a11y-lint" },
+    products: { section: "products", slug: "apple-policy-lint" },
     notes: { section: "notes", slug: "workbench-learnings-01" },
 };

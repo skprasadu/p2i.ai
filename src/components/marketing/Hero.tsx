@@ -5,7 +5,7 @@ export default function Hero() {
     <div className="heroBlock">
       <div className="heroPanel">
         <div className="badge">
-          <span className="kbd">p2i.ai</span>
+          <span className="kbd">Power2Idea AI</span>
           <span>GitHub Actions  Policy-to-code  Deterministic AI</span>
         </div>
 
@@ -43,15 +43,6 @@ export default function Hero() {
           >
             Read notes
           </TrackedLink>
-
-          <a
-            className="btn btnSecondary"
-            href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Patents
-          </a>
         </div>
       </div>
     </div>

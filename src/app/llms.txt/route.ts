@@ -13,7 +13,7 @@ export function GET() {
   });
 
   const lines: string[] = [];
-  lines.push("p2i.ai — Krishna Srinivasmurthy");
+  lines.push("Power2Idea AI");
   lines.push("Purpose: build deterministic AI GitHub Actions that convert policy and rules into AST-backed PR checks.");
   lines.push("Focus: product-first. Research and notes support validation, credibility, and reproducibility.");
   lines.push("");
@@ -24,8 +24,8 @@ export function GET() {
   lines.push("- Patents: https://patents.google.com/?inventor=Krishna+Srinivasmurthy");
   lines.push("");
   lines.push("Hubs:");
-  lines.push(`- Research: ${base}/research`);
   lines.push(`- Products: ${base}/products`);
+  lines.push(`- Research: ${base}/research`);
   lines.push(`- Notes: ${base}/notes`);
   lines.push(`- Sitemap: ${base}/sitemap.xml`);
   lines.push("");

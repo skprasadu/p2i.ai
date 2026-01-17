@@ -24,13 +24,6 @@ export default function TopNav() {
                 <Link href="/products">Products</Link>
                 <Link href="/research">Research</Link>
                 <Link href="/notes">Notes</Link>
-                <a
-                    href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"
-                    target="_blank"
-                    rel="noreferrer nofollow"
-                >
-                    Patents
-                </a>
                 <Link href="/#contact">Contact</Link>
             </nav>
 
@@ -69,14 +62,6 @@ export default function TopNav() {
                     <Link href="/products" onClick={() => setOpen(false)}>Products</Link>
                     <Link href="/research" onClick={() => setOpen(false)}>Research</Link>
                     <Link href="/notes" onClick={() => setOpen(false)}>Notes</Link>
-                    <a
-                        href="https://patents.google.com/?inventor=Krishna+Srinivasmurthy"
-                        target="_blank"
-                        rel="noreferrer nofollow"
-                        onClick={() => setOpen(false)}
-                    >
-                        Patents
-                    </a>
                     <Link href="/#contact" onClick={() => setOpen(false)}>Contact</Link>
                 </div>
             ) : null}

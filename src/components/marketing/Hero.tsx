@@ -9,13 +9,14 @@ export default function Hero() {
           <span>GitHub Actions  Policy-to-code  Deterministic AI</span>
         </div>
 
-        <h1>AI-powered GitHub Actions that turn policy into PR checks.</h1>
+        <h1>Deterministic AI GitHub Actions for AST-backed policy checks.</h1>
 
         <p style={{ marginTop: 10 }}>
-          I am Krishna, a solo engineer. I build GitHub Actions that remove recurring engineering friction
-          by converting rules and policies into deterministic, AST-backed PR checks with clean reports.
-          I run three streams: Products (the tools), Research (R&amp;D that validates new checks), and Notes
-          (short build logs as things ship). Language-agnostic by design: Swift today, Rust/TypeScript next.
+          I am Krishna, a solo engineer. I build GitHub Actions that remove recurring engineering
+          friction by converting policies and rules into deterministic PR checks (AST-based) with
+          clean, reviewable reports. I run three streams: Products (shipping Actions),
+          Research (R&D to validate new checks), and Notes (short build logs as things ship).
+          Language-agnostic by design: Swift today, Rust/TypeScript next.
         </p>
 
         <div style={{ display: "flex", gap: 10, marginTop: 18, flexWrap: "wrap" }}>

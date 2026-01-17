@@ -26,19 +26,19 @@ export default function HomePage() {
             label="Products"
             section="products"
             featured={fProducts}
-            blurb="Tools that ship. Open-source wedges and commercial productization notes—without leaking IP."
+            blurb="Shipping GitHub Actions that turn policies into deterministic PR checks with clean reports."
           />
           <CtaBucket
             label="Research"
             section="research"
             featured={fResearch}
-            blurb="Benchmarks, deep dives, and reproducible experiments across Apple Silicon, inference, and GPU systems."
+            blurb="R&D that validates new checks: AST parsing, policy packs, and deterministic evaluation."
           />
           <CtaBucket
             label="Notes"
             section="notes"
             featured={fNotes}
-            blurb="Short field notes: what I tried, what worked, what didn’t, and what I’m doing next."
+            blurb="Short build logs and release notes as tools ship and evolve."
           />
         </div>
       </Section>

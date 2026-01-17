@@ -6,15 +6,16 @@ export default function Hero() {
       <div className="heroPanel">
         <div className="badge">
           <span className="kbd">p2i.ai</span>
-          <span>Products • Policy-as-Code • Deterministic AI</span>
+          <span>GitHub Actions  Policy-to-code  Deterministic AI</span>
         </div>
 
-        <h1>Wedge products that turn rules into shipping checks.</h1>
+        <h1>AI-powered GitHub Actions that turn policy into PR checks.</h1>
 
         <p style={{ marginTop: 10 }}>
-          I&apos;m Krishna, a solo engineer building tools that remove recurring engineering friction.
-          The core pattern is simple: find a wedge, encode the rules (AST + policy-as-code), and ship a clean product.
-          Research and notes are the public build log—evidence behind the products and a trail for SEO and LLMs.
+          I am Krishna, a solo engineer. I build GitHub Actions that remove recurring engineering friction
+          by converting rules and policies into deterministic, AST-backed PR checks with clean reports.
+          I run three streams: Products (the tools), Research (R&amp;D that validates new checks), and Notes
+          (short build logs as things ship). Language-agnostic by design: Swift today, Rust/TypeScript next.
         </p>
 
         <div style={{ display: "flex", gap: 10, marginTop: 18, flexWrap: "wrap" }}>
@@ -51,8 +52,7 @@ export default function Hero() {
             Patents
           </a>
         </div>
-
       </div>
-    </div >
+    </div>
   );
 }

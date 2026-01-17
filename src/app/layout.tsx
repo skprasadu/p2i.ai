@@ -12,9 +12,9 @@ import type { Metadata } from "next";
 
 const siteUrl = "https://p2i.ai";
 
-const siteTitle = "Power2Idea AI — Applied AI Products & Research";
+const siteTitle = "Power2Idea AI  Deterministic AI GitHub Actions";
 const siteDescription =
-  "Wedge products that turn rules into shipping checks.";
+  "AI-powered GitHub Actions that convert policy and rules into deterministic, AST-backed PR checks with clean reports.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -40,17 +40,49 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Krishna Srinivasmurthy",
-    url: siteUrl,
-    sameAs: [
-      "https://www.linkedin.com/in/krishnaprasad1",
-      "https://github.com/skprasadu",
-      "https://patents.google.com/?inventor=Krishna+Srinivasmurthy",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
+        name: "Power2Idea AI",
+        url: siteUrl,
+        description: siteDescription,
+        sameAs: [
+          "https://github.com/skprasadu",
+          "https://www.linkedin.com/in/krishnaprasad1",
+          "https://patents.google.com/?inventor=Krishna+Srinivasmurthy",
+        ],
+        founder: {
+          "@type": "Person",
+          name: "Krishna Srinivasmurthy",
+          url: siteUrl,
+          sameAs: [
+            "https://github.com/skprasadu",
+            "https://www.linkedin.com/in/krishnaprasad1",
+          ],
+        },
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            contactType: "sales",
+            email: "krishna@p2i.ai",
+          },
+          {
+            "@type": "ContactPoint",
+            contactType: "support",
+            email: "krishna@p2i.ai",
+          },
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
+        name: siteTitle,
+        description: siteDescription,
+        publisher: { "@id": `${siteUrl}/#organization` },
+      },
     ],
-    jobTitle: "Applied AI Products & Research",
-    description:
-      "Wedge products that turn rules into shipping checks.",
   };
 
   return (
@@ -77,7 +109,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <footer className="hr" style={{ marginTop: 40, paddingTop: 18 }}>
             <div style={{ color: "rgba(11, 15, 23, 0.65)", fontSize: 13 }}>
-              © {new Date().getFullYear()} Power2Idea AI — Applied AI Products & Research
+              © {new Date().getFullYear()} Power2Idea AI  Deterministic AI GitHub Actions
             </div>
           </footer>
         </div>

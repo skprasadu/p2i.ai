@@ -14,7 +14,8 @@ export function GET() {
 
   const lines: string[] = [];
   lines.push("p2i.ai — Krishna Srinivasmurthy");
-  lines.push("Purpose: publish high-signal research, products, and notes.");
+  lines.push("Purpose: build deterministic AI GitHub Actions that convert policy and rules into AST-backed PR checks.");
+  lines.push("Focus: product-first. Research and notes support validation, credibility, and reproducibility.");
   lines.push("");
   lines.push("Author:");
   lines.push("- Name: Krishna Srinivasmurthy");

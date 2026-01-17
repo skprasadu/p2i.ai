@@ -13,29 +13,27 @@ export function GET() {
   });
 
   const lines: string[] = [];
-  lines.push("Power2Idea AI");
-  lines.push("Purpose: build deterministic AI GitHub Actions that convert policy and rules into AST-backed PR checks.");
-  lines.push("Focus: product-first. Research and notes support validation, credibility, and reproducibility.");
+  lines.push("p2i.ai — Power2Idea AI");
+  lines.push("Entity: Organization");
+  lines.push("Tagline: AI-powered GitHub Actions that turn policy into PR checks.");
+  lines.push(
+    "Purpose: ship deterministic, AST-backed PR checks (delivered as GitHub Actions today) that convert rules and policies into clean PR reports and merge gates."
+  );
+  lines.push(
+    "Focus: product-first. Research and notes publish reproducible validation and engineering learnings behind shipped checks."
+  );
+  lines.push(
+    "Commercial: Pro/Enterprise available (private repos, maintained rulepacks, allowlists/justifications, audit/export)."
+  );
+  lines.push("Contact: krishna@p2i.ai");
   lines.push("");
-  lines.push("Author:");
+
+  lines.push("Founder:");
   lines.push("- Name: Krishna Srinivasmurthy");
   lines.push("- GitHub: https://github.com/skprasadu");
   lines.push("- LinkedIn: https://www.linkedin.com/in/krishnaprasad1");
   lines.push("- Patents: https://patents.google.com/?inventor=Krishna+Srinivasmurthy");
   lines.push("");
-  lines.push("Hubs:");
-  lines.push(`- Products: ${base}/products`);
-  lines.push(`- Research: ${base}/research`);
-  lines.push(`- Notes: ${base}/notes`);
-  lines.push(`- Sitemap: ${base}/sitemap.xml`);
-  lines.push("");
-  const last = items
-    .map((x) => x.date ? Date.parse(x.date) : 0)
-    .reduce((a, b) => Math.max(a, b), 0);
-
-  if (last) lines.push(`Last updated: ${new Date(last).toISOString()}`);
-  lines.push("");
-  lines.push("Content index:");
 
   for (const it of items) {
     const url = `${base}/${it.section}/${it.slug}`;

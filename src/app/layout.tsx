@@ -12,9 +12,9 @@ import type { Metadata } from "next";
 
 const siteUrl = "https://p2i.ai";
 
-const siteTitle = "Power2Idea AI — Applied AI Research & Products";
+const siteTitle = "Power2Idea AI — Applied AI Products & Research";
 const siteDescription =
-  "Applied AI research, benchmarks, and tools—published as reproducible pages and shaped into products.";
+  "Wedge products that turn rules into shipping checks.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -48,9 +48,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "https://github.com/skprasadu",
       "https://patents.google.com/?inventor=Krishna+Srinivasmurthy",
     ],
-    jobTitle: "Applied AI Research & Engineering",
+    jobTitle: "Applied AI Products & Research",
     description:
-      "Applied AI research focused on benchmarking, Apple Silicon performance, and productized tools.",
+      "Wedge products that turn rules into shipping checks.",
   };
 
   return (
@@ -77,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <footer className="hr" style={{ marginTop: 40, paddingTop: 18 }}>
             <div style={{ color: "rgba(11, 15, 23, 0.65)", fontSize: 13 }}>
-              © {new Date().getFullYear()} Power2Idea AI — Applied AI Research & Products
+              © {new Date().getFullYear()} Power2Idea AI — Applied AI Products & Research
             </div>
           </footer>
         </div>

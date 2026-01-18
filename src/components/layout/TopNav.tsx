@@ -24,7 +24,7 @@ export default function TopNav() {
                 <Link href="/products">Products</Link>
                 <Link href="/research">Research</Link>
                 <Link href="/notes">Notes</Link>
-                <Link href="/#contact">Contact</Link>
+                <a href="#contact">Contact</a>
             </nav>
 
             {/* Mobile hamburger */}
@@ -62,7 +62,7 @@ export default function TopNav() {
                     <Link href="/products" onClick={() => setOpen(false)}>Products</Link>
                     <Link href="/research" onClick={() => setOpen(false)}>Research</Link>
                     <Link href="/notes" onClick={() => setOpen(false)}>Notes</Link>
-                    <Link href="/#contact" onClick={() => setOpen(false)}>Contact</Link>
+                    <a href="/#contact" onClick={() => setOpen(false)}>Contact</a>
                 </div>
             ) : null}
         </div>

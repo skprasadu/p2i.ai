@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 
 const siteUrl = "https://p2i.ai";
 
-const siteTitle = "Power2Idea AI  Deterministic AI GitHub Actions";
+const siteTitle = "Power2Idea AI - Deterministic AI GitHub Actions";
 const siteDescription =
   "AI-powered GitHub Actions that convert policy and rules into deterministic, AST-backed PR checks with clean reports.";
 
@@ -109,7 +109,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <footer className="hr" style={{ marginTop: 40, paddingTop: 18 }}>
             <div style={{ color: "rgba(11, 15, 23, 0.65)", fontSize: 13 }}>
-              © {new Date().getFullYear()} Power2Idea AI  Deterministic AI GitHub Actions
+              © {new Date().getFullYear()} Power2Idea AI - Deterministic AI GitHub Actions
             </div>
           </footer>
         </div>

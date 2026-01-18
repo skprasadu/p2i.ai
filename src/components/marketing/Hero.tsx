@@ -6,17 +6,13 @@ export default function Hero() {
       <div className="heroPanel">
         <div className="badge">
           <span className="kbd">Power2Idea AI</span>
-          <span>GitHub Actions  Policy-to-code  Deterministic AI</span>
+          <span>GitHub Actions - Policy-to-code - Deterministic</span>
         </div>
 
         <h1>Code Policies, Enforced Early</h1>
 
         <p style={{ marginTop: 10 }}>
-          We build GitHub Actions that remove recurring engineering
-          friction by converting policies and rules into deterministic PR checks (AST-based) with
-          clean, reviewable reports. I run three streams: Products (shipping Actions),
-          Research (R&D to validate new checks), and Notes (short build logs as things ship).
-          Language-agnostic by design: Swift today, Rust/TypeScript next.
+          Deterministic policy enforcement via GitHub Actions for modern codebases.
         </p>
 
         <div style={{ display: "flex", gap: 10, marginTop: 18, flexWrap: "wrap" }}>

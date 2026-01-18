@@ -9,10 +9,10 @@ export default function Hero() {
           <span>GitHub Actions  Policy-to-code  Deterministic AI</span>
         </div>
 
-        <h1>Deterministic AI GitHub Actions for AST-backed policy checks.</h1>
+        <h1>GitHub Actions that remove recurring engineering friction.</h1>
 
         <p style={{ marginTop: 10 }}>
-          I am Krishna, a solo engineer. I build GitHub Actions that remove recurring engineering
+          We build GitHub Actions that remove recurring engineering
           friction by converting policies and rules into deterministic PR checks (AST-based) with
           clean, reviewable reports. I run three streams: Products (shipping Actions),
           Research (R&D to validate new checks), and Notes (short build logs as things ship).

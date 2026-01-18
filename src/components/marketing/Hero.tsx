@@ -9,7 +9,7 @@ export default function Hero() {
           <span>GitHub Actions  Policy-to-code  Deterministic AI</span>
         </div>
 
-        <h1>GitHub Actions that remove recurring engineering friction.</h1>
+        <h1>Code Policies, Enforced Early</h1>
 
         <p style={{ marginTop: 10 }}>
           We build GitHub Actions that remove recurring engineering
